@@ -1,0 +1,72 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.login-container h1 {
+  font-size: 56px;
+  color: white;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.login-container form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.login-container form input {
+  border: transparent;
+  height: 40px;
+  padding: 0 24px;
+  background: white;
+  border-radius: 8px;
+}
+
+.login-container form button {
+  border: transparent;
+  height: 40px;
+  padding: 0 24px;
+  background: white;
+  border-radius: 8px;
+  color: #ff7979;
+}
+
+.login-container form span {
+  color: white;
+  margin-top: 25px;
+}
+
+@keyframes example {
+  from {
+    color: #ff7979;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-size: 16px;
+  }
+  to {
+    color: #ff7979;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    font-size: 18px;
+  }
+}
+
+.login-container form a {
+  text-decoration: none;
+  color: white;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.login-container form input::placeholder {
+  color: #ff7979;
+}
