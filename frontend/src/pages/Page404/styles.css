@@ -1,0 +1,12 @@
+.lottie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lottie-container span {
+  margin-top: 20px;
+  font-size: 56px;
+  color: white;
+}

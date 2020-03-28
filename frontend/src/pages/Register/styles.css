@@ -1,0 +1,47 @@
+.register-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form-side form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 200px;
+}
+
+.form-side h1 {
+  color: white;
+  font-size: 64px;
+  margin-bottom: 15px;
+  letter-spacing: 5px;
+}
+
+.form-side form input {
+  border: transparent;
+  background: white;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 0 24px;
+  border-radius: 4px;
+}
+
+.form-side form input::placeholder {
+  color: #ff7979;
+}
+
+.form-side form button {
+  border: transparent;
+  background: white;
+  height: 40px;
+  border-radius: 4px;
+  width: 100px;
+  color: #ff7979;
+}
+
+.form-side form button:hover {
+  cursor: pointer;
+}
