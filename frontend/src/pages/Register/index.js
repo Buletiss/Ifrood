@@ -37,8 +37,7 @@ export default function Register() {
           <Input name='password' placeholder='Password' type='password' />
           <button type='submit'>Cadastrar!</button>
           <span>
-            Já é cadastrado?
-            <a href='/'> Clique aqui!</a>
+            Já é cadastrado? <a href='/'>Clique aqui!</a>
           </span>
         </Form>
       </div>
