@@ -51,7 +51,7 @@
   color: white;
   margin-top: 25px;
 }
-
+/* 
 @keyframes example {
   from {
     color: #ff7979;
@@ -65,10 +65,10 @@
     -webkit-text-stroke-color: white;
     font-size: 18px;
   }
-}
+} */
 
 .login-container form a {
-  text-decoration: none;
+  text-decoration: underline;
   color: white;
   animation-name: example;
   animation-duration: 1s;

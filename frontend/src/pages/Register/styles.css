@@ -39,6 +39,10 @@
   color: white;
 }
 
+.form-side form span a {
+  text-decoration: underline;
+}
+
 .form-side form input::placeholder {
   color: #ff7979;
 }
@@ -54,4 +58,8 @@
 
 .form-side form button:hover {
   cursor: pointer;
+  background: #ff7979;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.5s;
 }
