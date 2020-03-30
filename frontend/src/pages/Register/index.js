@@ -4,6 +4,8 @@ import animationData from '../../assets/noodles.json';
 import * as Yup from 'yup';
 import { Form, Input } from '@rocketseat/unform';
 import './styles.css';
+// import history from '../../services/history';
+import API from 'axios';
 
 export default function Register() {
   const schema = Yup.object().shape({
@@ -14,8 +16,12 @@ export default function Register() {
     password: Yup.string().min(6).required('O campo senha é obrigatório'),
   });
 
-  const handleSubmit = (values) => {
-    console.log(values);
+  const handleSubmit = async (values) => {
+    try {
+      await API.post('http://localhost:3333/users', values);
+    } catch (error) {
+      console.log('deu erro');
+    }
   };
 
   const defaultOptions = {

@@ -4,6 +4,7 @@ import animationData from '../../assets/delivery.json';
 import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
 import API from '../../services/api';
+import history from '../../services/history';
 import './styles.css';
 
 export default function Login() {
@@ -15,8 +16,12 @@ export default function Login() {
   });
 
   const handleSubmit = async (values) => {
-    const response = await API.post('http://localhost:3333/login', values);
-    console.log(response.data);
+    try {
+      await API.post('http://localhost:3333/login', values);
+      history.push('/dashboard');
+    } catch (error) {
+      history.push('/');
+    }
   };
 
   const defaultOptions = {

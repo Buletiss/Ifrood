@@ -4,20 +4,15 @@ module.exports = {
   async post(req, res) {
     const { email, password } = req.body;
 
-    const login = await connection('users')
+    const user = await connection('users')
       .where('email', email)
-      .select('email')
+      .andWhere('password', password)
+      .select('email', 'password')
       .first();
 
-    const senha = await connection('users')
-      .where('password', password)
-      .select('password')
-      .first();
+    if (!user)
+      return res.status(400).json({ error: 'Usuário ou senha incorreta' });
 
-    if (!login || !senha) {
-      return res.status(400).send({ mensseger: 'Senha ou login incorreta!!' });
-    }
-
-    return res.json({ login, senha });
+    return res.json(user);
   },
 };
