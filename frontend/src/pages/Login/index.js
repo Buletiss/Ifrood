@@ -3,6 +3,7 @@ import Lottie from 'react-lottie';
 import animationData from '../../assets/delivery.json';
 import { Form, Input } from '@rocketseat/unform';
 import * as Yup from 'yup';
+import API from '../../services/api';
 import './styles.css';
 
 export default function Login() {
@@ -10,11 +11,12 @@ export default function Login() {
     email: Yup.string()
       .email('Por favor, insira um e-mail válido')
       .required('O campo e-mail é obrigatório'),
-    pass: Yup.string().min(6).required('O campo senha é obrigatório'),
+    password: Yup.string().required('O campo senha é obrigatório'),
   });
 
-  const handleSubmit = (values) => {
-    console.log(values);
+  const handleSubmit = async (values) => {
+    const response = await API.post('http://localhost:3333/login', values);
+    console.log(response.data);
   };
 
   const defaultOptions = {
@@ -37,7 +39,7 @@ export default function Login() {
       <h1>IFrood</h1>
       <Form onSubmit={handleSubmit} schema={schema}>
         <Input name='email' type='email' placeholder='E-mail' /> <br />
-        <Input name='pass' type='password' placeholder='Password' /> <br />
+        <Input name='password' type='password' placeholder='Password' /> <br />
         <button type='submit'>Sign In</button>
         <span>
           Não está cadastrado? <a href='/register'>Cadastre-se aqui !</a>
