@@ -37,6 +37,14 @@
   background: white;
   border-radius: 8px;
   color: #ff7979;
+  cursor: pointer;
+}
+
+.login-container form button:hover {
+  background: #ff7979;
+  color: white;
+  border: 1px solid white;
+  transition: all 0.5s;
 }
 
 .login-container form span {
