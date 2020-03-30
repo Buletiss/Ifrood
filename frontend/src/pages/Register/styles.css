@@ -17,7 +17,6 @@
   color: white;
   font-size: 64px;
   margin-bottom: 15px;
-  letter-spacing: 5px;
 }
 
 .form-side form input {
@@ -27,6 +26,17 @@
   margin-bottom: 20px;
   padding: 0 24px;
   border-radius: 4px;
+  width: 200px;
+}
+
+.form-side form a {
+  text-decoration: none;
+  color: white;
+}
+
+.form-side form span {
+  margin: 15px 0 15px;
+  color: white;
 }
 
 .form-side form input::placeholder {

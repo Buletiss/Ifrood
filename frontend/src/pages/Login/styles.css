@@ -11,7 +11,6 @@
   color: white;
   margin-top: 50px;
   margin-bottom: 50px;
-  letter-spacing: 5px;
 }
 
 .login-container form {
@@ -25,6 +24,7 @@
 .login-container form input {
   border: transparent;
   height: 40px;
+  width: 200px;
   padding: 0 24px;
   background: white;
   border-radius: 8px;

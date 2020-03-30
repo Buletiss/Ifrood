@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comic+Neue&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   outline: 0;
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Fredoka One', cursive, sans-serif;
   background: #ff7979;
 }
