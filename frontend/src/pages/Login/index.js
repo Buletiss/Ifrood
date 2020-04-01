@@ -7,8 +7,10 @@ import * as Yup from 'yup';
 import API from '../../services/api';
 import history from '../../services/history';
 import './styles.css';
+import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
-export default function Login() {
+function Login() {
   const schema = Yup.object().shape({
     email: Yup.string()
       .email('Por favor, insira um e-mail válido')
@@ -17,12 +19,18 @@ export default function Login() {
   });
 
   const [isLoading, setIsLoading] = useState(false);
+  const dispatch = useDispatch();
 
   const handleSubmit = async (values) => {
     try {
       setIsLoading(true);
       await API.post('http://localhost:3333/login', values);
+      dispatch({
+        type: 'LOGIN_REQUEST',
+        values,
+      });
       setIsLoading(false);
+
       history.push('/dashboard');
     } catch (error) {
       history.push('/');
@@ -79,3 +87,5 @@ export default function Login() {
     </>
   );
 }
+
+export default connect()(Login);
