@@ -6,7 +6,7 @@
 <h1>Arquitetura</h2>
 
 <p>Nessa projeto foi utilizado <strong>NodeJs</strong> e <strong>React</strong> para fazer o frontend </p>
-<p>Utilizado o bando de dados<strong>MySqlite3</strong></p>
+<p>Utilizado o bando de dados <strong>Sqlite3</strong></p>
 
 <h2>Dependências</h2>
 
